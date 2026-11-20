@@ -4,182 +4,207 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🔥 Reto Altar de Muertos UMQ - ¿Llegarás a la cima?</title>
+</head>
+<body>
+<!-- ===== INICIO BLOQUE WORDPRESS: copiar desde aquí ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --naranja: #FF6B35;
-  --naranja-oscuro: #D94E1F;
-  --morado: #7B2D8E;
-  --morado-claro: #9D4EDD;
-  --rosa: #E91E63;
-  --dorado: #FFD700;
-  --dorado-oscuro: #B8860B;
-  --azul-noche: #1A237E;
-  --hueso: #FFF8E1;
-  --hueso-suave: #F5F0E1;
-  --ink: #2D1B0E;
-  --muted: #6B5B4F;
-  --line: rgba(255,107,53,0.25);
-  --step-0: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
-  --step-1: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
-  --step-2: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
-  --step-3: clamp(2rem, 1.5rem + 2vw, 3.2rem);
-  --step-4: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
-  --space: clamp(1rem, 0.7rem + 1.2vw, 1.8rem);
-  --radius: 16px;
-  --shadow: 0 4px 24px rgba(45,27,14,0.12), 0 1px 3px rgba(45,27,14,0.08);
-  --shadow-lg: 0 12px 40px rgba(45,27,14,0.18), 0 4px 12px rgba(45,27,14,0.1);
+.umq-altar {
+  --umq-naranja: #FF6B35;
+  --umq-naranja-oscuro: #D94E1F;
+  --umq-morado: #7B2D8E;
+  --umq-morado-claro: #9D4EDD;
+  --umq-rosa: #E91E63;
+  --umq-dorado: #FFD700;
+  --umq-dorado-oscuro: #B8860B;
+  --umq-azul-noche: #1A237E;
+  --umq-hueso: #FFF8E1;
+  --umq-hueso-suave: #F5F0E1;
+  --umq-ink: #2D1B0E;
+  --umq-muted: #6B5B4F;
+  --umq-line: rgba(255,107,53,0.25);
+  --umq-step-0: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --umq-step-1: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  --umq-step-2: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+  --umq-step-3: clamp(2rem, 1.5rem + 2vw, 3.2rem);
+  --umq-step-4: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  --umq-space: clamp(1rem, 0.7rem + 1.2vw, 1.8rem);
+  --umq-radius: 16px;
+  --umq-shadow: 0 4px 24px rgba(45,27,14,0.12), 0 1px 3px rgba(45,27,14,0.08);
+  --umq-shadow-lg: 0 12px 40px rgba(45,27,14,0.18), 0 4px 12px rgba(45,27,14,0.1);
 }
 
-* { box-sizing: border-box; margin: 0; }
+.umq-altar, .umq-altar *, .umq-altar *::before, .umq-altar *::after { box-sizing: border-box; }
+.umq-altar * { margin: 0; }
 
-body {
+.umq-altar {
+  display: block;
+  width: 100%;
   font-family: "Inter", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
-  font-size: var(--step-0);
+  font-size: var(--umq-step-0);
   line-height: 1.7;
-  color: var(--ink);
+  color: var(--umq-ink);
   background: linear-gradient(180deg, #2D1B0E 0%, #4A2C1A 40%, #6B3D2E 100%);
-  min-height: 100vh;
+  text-align: left;
 }
 
-header {
+.umq-altar h1, .umq-altar h2, .umq-altar h3, .umq-altar h4 {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.umq-altar p, .umq-altar ul, .umq-altar li {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+.umq-altar a { text-decoration: none; box-shadow: none; }
+.umq-altar img, .umq-altar svg { max-width: 100%; }
+
+.umq-altar .umq-hero {
   position: relative;
   text-align: center;
-  padding: calc(var(--space)*3) calc(var(--space)*1.5) calc(var(--space)*2.2);
-  background: linear-gradient(180deg, var(--azul-noche) 0%, var(--morado) 50%, var(--naranja-oscuro) 100%);
-  color: var(--hueso);
+  padding: calc(var(--umq-space)*3) calc(var(--umq-space)*1.5) calc(var(--umq-space)*2.2);
+  background: linear-gradient(180deg, var(--umq-azul-noche) 0%, var(--umq-morado) 50%, var(--umq-naranja-oscuro) 100%);
+  color: var(--umq-hueso);
   overflow: hidden;
 }
-header::before {
+.umq-altar .umq-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L35 20L55 30L35 40L30 60L25 40L5 30L25 20Z' fill='%23FFD700' fill-opacity='0.06'/%3E%3C/svg%3E");
   opacity: 0.4;
 }
-header .content { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
+.umq-altar .umq-hero .umq-content { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
 
-header .eyebrow {
+.umq-altar .umq-hero .umq-eyebrow {
   display: inline-block;
-  background: linear-gradient(135deg, var(--dorado), var(--naranja));
-  color: var(--azul-noche);
+  background: linear-gradient(135deg, var(--umq-dorado), var(--umq-naranja));
+  color: var(--umq-azul-noche);
   font-weight: 800;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   padding: 0.5rem 1.4rem;
   border-radius: 999px;
-  margin-bottom: calc(var(--space)*0.9);
-  box-shadow: var(--shadow-lg);
+  margin-bottom: calc(var(--umq-space)*0.9);
+  box-shadow: var(--umq-shadow-lg);
 }
 
-header h1 {
+.umq-altar .umq-hero h1 {
   font-family: "Cinzel", "Hiragino Sans", serif;
-  font-size: var(--step-4);
+  font-size: var(--umq-step-4);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: calc(var(--space)*0.6);
+  margin-bottom: calc(var(--umq-space)*0.6);
   text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
-header h1 span {
-  background: linear-gradient(135deg, var(--dorado), var(--naranja));
+.umq-altar .umq-hero h1 span {
+  background: linear-gradient(135deg, var(--umq-dorado), var(--umq-naranja));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-header .hook {
-  font-size: var(--step-1);
+.umq-altar .umq-hero .umq-hook {
+  font-size: var(--umq-step-1);
   font-weight: 400;
   opacity: 0.95;
   max-width: 560px;
-  margin: 0 auto calc(var(--space)*0.8);
+  margin: 0 auto calc(var(--umq-space)*0.8);
   line-height: 1.5;
 }
 
-header .prize-inline {
+.umq-altar .umq-hero .umq-prize-inline {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   background: linear-gradient(135deg, rgba(255,215,0,0.18), rgba(255,107,53,0.18));
   border: 1.5px solid rgba(255,215,0,0.4);
-  color: var(--dorado);
+  color: var(--umq-dorado);
   font-weight: 700;
   font-size: 0.92rem;
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
-  margin-bottom: calc(var(--space)*1);
+  margin-bottom: calc(var(--umq-space)*1);
   backdrop-filter: blur(4px);
 }
 
-header .cta-box {
+.umq-altar .umq-hero .umq-cta-box {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,215,0,0.25);
-  border-radius: var(--radius);
-  padding: calc(var(--space)*1);
+  border-radius: var(--umq-radius);
+  padding: calc(var(--umq-space)*1);
   max-width: 520px;
   margin: 0 auto;
 }
-header .cta-box p {
+.umq-altar .umq-hero .umq-cta-box p {
   font-size: 1rem;
   margin-bottom: 0.7rem;
   opacity: 0.95;
 }
-header .cta-btn {
+.umq-altar .umq-hero .umq-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: linear-gradient(135deg, var(--dorado), var(--naranja));
-  color: var(--azul-noche);
+  background: linear-gradient(135deg, var(--umq-dorado), var(--umq-naranja));
+  color: var(--umq-azul-noche);
   font-weight: 800;
   font-size: 1.05rem;
   text-decoration: none;
   padding: 0.85rem 1.8rem;
   border-radius: 999px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--umq-shadow-lg);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-header .cta-btn:hover {
+.umq-altar .umq-hero .umq-cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 48px rgba(255,107,53,0.35);
 }
 
-main {
+.umq-altar .umq-main {
   max-width: 900px;
   margin: 0 auto;
-  padding: calc(var(--space)*2) calc(var(--space)*1.5);
+  padding: calc(var(--umq-space)*2) calc(var(--umq-space)*1.5);
 }
 
-section {
-  background: var(--hueso);
-  border-radius: var(--radius);
-  padding: calc(var(--space)*1.8);
-  margin-bottom: calc(var(--space)*1.5);
-  box-shadow: var(--shadow-lg);
+.umq-altar .umq-section {
+  background: var(--umq-hueso);
+  border-radius: var(--umq-radius);
+  padding: calc(var(--umq-space)*1.8);
+  margin-bottom: calc(var(--umq-space)*1.5);
+  box-shadow: var(--umq-shadow-lg);
   position: relative;
 }
-section::before {
+.umq-altar .umq-section::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 5px;
-  background: linear-gradient(90deg, var(--naranja), var(--rosa), var(--morado), var(--dorado));
-  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--umq-naranja), var(--umq-rosa), var(--umq-morado), var(--umq-dorado));
+  border-radius: var(--umq-radius) var(--umq-radius) 0 0;
 }
 
-.section-header {
+.umq-altar .umq-section-header {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  margin-bottom: calc(var(--space)*0.9);
+  margin-bottom: calc(var(--umq-space)*0.9);
 }
-.section-num {
+.umq-altar .umq-section-num {
   width: 3rem; height: 3rem;
   min-width: 3rem;
-  background: linear-gradient(135deg, var(--naranja), var(--rosa));
+  background: linear-gradient(135deg, var(--umq-naranja), var(--umq-rosa));
   color: white;
   font-family: "Cinzel", serif;
   font-size: 1.3rem;
@@ -187,215 +212,215 @@ section::before {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--umq-shadow);
 }
-section h2 {
+.umq-altar .umq-section h2 {
   font-family: "Cinzel", serif;
-  font-size: var(--step-2);
-  color: var(--morado);
+  font-size: var(--umq-step-2);
+  color: var(--umq-morado);
   line-height: 1.2;
 }
 
-.step-cards {
+.umq-altar .umq-step-cards {
   display: grid;
-  gap: calc(var(--space)*0.7);
-  margin-top: calc(var(--space)*0.8);
+  gap: calc(var(--umq-space)*0.7);
+  margin-top: calc(var(--umq-space)*0.8);
 }
-.step-card {
+.umq-altar .umq-step-card {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
-  background: linear-gradient(145deg, #fff, var(--hueso-suave));
-  border: 1px solid var(--line);
+  background: linear-gradient(145deg, #fff, var(--umq-hueso-suave));
+  border: 1px solid var(--umq-line);
   border-radius: 14px;
-  padding: calc(var(--space)*0.8);
-  box-shadow: var(--shadow);
+  padding: calc(var(--umq-space)*0.8);
+  box-shadow: var(--umq-shadow);
   transition: transform 0.2s;
 }
-.step-card:hover { transform: translateX(4px); }
-.step-card .icon {
+.umq-altar .umq-step-card:hover { transform: translateX(4px); }
+.umq-altar .umq-step-card .umq-icon {
   width: 2.8rem; height: 2.8rem;
   min-width: 2.8rem;
-  background: linear-gradient(135deg, var(--naranja), var(--dorado));
+  background: linear-gradient(135deg, var(--umq-naranja), var(--umq-dorado));
   border-radius: 12px;
   display: grid;
   place-items: center;
   font-size: 1.3rem;
 }
-.step-card h4 {
+.umq-altar .umq-step-card h4 {
   font-family: "Cinzel", serif;
-  color: var(--morado);
+  color: var(--umq-morado);
   font-size: 1.05rem;
   margin-bottom: 0.25rem;
 }
-.step-card p {
+.umq-altar .umq-step-card p {
   font-size: 0.94rem;
-  color: var(--muted);
+  color: var(--umq-muted);
   margin: 0;
   line-height: 1.55;
 }
-.step-card .highlight {
-  color: var(--naranja-oscuro);
+.umq-altar .umq-step-card .umq-highlight {
+  color: var(--umq-naranja-oscuro);
   font-weight: 700;
 }
 
-.prize-banner {
-  background: linear-gradient(135deg, var(--dorado), var(--naranja));
-  color: var(--azul-noche);
+.umq-altar .umq-prize-banner {
+  background: linear-gradient(135deg, var(--umq-dorado), var(--umq-naranja));
+  color: var(--umq-azul-noche);
   border-radius: 14px;
-  padding: calc(var(--space)*1.1);
+  padding: calc(var(--umq-space)*1.1);
   text-align: center;
-  box-shadow: var(--shadow-lg);
-  margin: calc(var(--space)*1) 0 0.3rem;
+  box-shadow: var(--umq-shadow-lg);
+  margin: calc(var(--umq-space)*1) 0 0.3rem;
 }
-.prize-banner h3 {
+.umq-altar .umq-prize-banner h3 {
   font-family: "Cinzel", serif;
-  font-size: var(--step-2);
+  font-size: var(--umq-step-2);
   margin-bottom: 0.4rem;
 }
-.prize-banner p { font-weight: 600; margin: 0; font-size: 1rem; }
+.umq-altar .umq-prize-banner p { font-weight: 600; margin: 0; font-size: 1rem; }
 
-.capture-grid {
+.umq-altar .umq-capture-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: calc(var(--space)*0.7);
-  margin-top: calc(var(--space)*0.8);
+  gap: calc(var(--umq-space)*0.7);
+  margin-top: calc(var(--umq-space)*0.8);
 }
-.capture-card {
-  background: linear-gradient(145deg, #fff, var(--hueso-suave));
-  border: 2px solid var(--line);
+.umq-altar .umq-capture-card {
+  background: linear-gradient(145deg, #fff, var(--umq-hueso-suave));
+  border: 2px solid var(--umq-line);
   border-radius: 14px;
-  padding: calc(var(--space)*0.8);
+  padding: calc(var(--umq-space)*0.8);
   text-align: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--umq-shadow);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   position: relative;
   overflow: hidden;
 }
-.capture-card:hover {
+.umq-altar .umq-capture-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--naranja);
+  box-shadow: var(--umq-shadow-lg);
+  border-color: var(--umq-naranja);
 }
-.capture-card .cam-num {
+.umq-altar .umq-capture-card .umq-cam-num {
   position: absolute;
   top: -6px; right: -6px;
   width: 2.2rem; height: 2.2rem;
-  background: linear-gradient(135deg, var(--naranja), var(--rosa));
+  background: linear-gradient(135deg, var(--umq-naranja), var(--umq-rosa));
   color: white;
   font-weight: 800;
   font-size: 0.9rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--umq-shadow);
 }
-.capture-card .cam-icon {
+.umq-altar .umq-capture-card .umq-cam-icon {
   font-size: 2.2rem;
   margin-bottom: 0.4rem;
 }
-.capture-card h4 {
+.umq-altar .umq-capture-card h4 {
   font-family: "Cinzel", serif;
-  color: var(--morado);
+  color: var(--umq-morado);
   font-size: 0.95rem;
   margin-bottom: 0.4rem;
 }
-.capture-card p {
+.umq-altar .umq-capture-card p {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: var(--umq-muted);
   line-height: 1.5;
   margin: 0;
 }
 
-.tip-box {
+.umq-altar .umq-tip-box {
   background: linear-gradient(145deg, rgba(123,45,142,0.08), rgba(255,107,53,0.06));
-  border-left: 4px solid var(--naranja);
+  border-left: 4px solid var(--umq-naranja);
   border-radius: 0 12px 12px 0;
-  padding: calc(var(--space)*0.7);
+  padding: calc(var(--umq-space)*0.7);
   margin-bottom: 0.7rem;
 }
-.tip-box strong {
-  color: var(--morado);
+.umq-altar .umq-tip-box strong {
+  color: var(--umq-morado);
   font-weight: 700;
 }
-.tip-box p {
+.umq-altar .umq-tip-box p {
   margin: 0;
   font-size: 0.94rem;
-  color: var(--muted);
+  color: var(--umq-muted);
 }
 
-.diagram-wrap {
+.umq-altar .umq-diagram-wrap {
   background: linear-gradient(180deg, #1A237E 0%, #4A2C1A 100%);
-  border-radius: var(--radius);
-  padding: calc(var(--space)*1.2);
-  margin: calc(var(--space)*1.2) 0;
+  border-radius: var(--umq-radius);
+  padding: calc(var(--umq-space)*1.2);
+  margin: calc(var(--umq-space)*1.2) 0;
   text-align: center;
 }
-.diagram-wrap svg {
+.umq-altar .umq-diagram-wrap svg {
   width: 100%;
   max-width: 380px;
   height: auto;
 }
-.diagram-legend {
+.umq-altar .umq-diagram-legend {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.6rem 1rem;
   margin-top: 0.8rem;
 }
-.diagram-legend span {
+.umq-altar .umq-diagram-legend span {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
   font-size: 0.78rem;
-  color: var(--hueso);
+  color: var(--umq-hueso);
   background: rgba(255,255,255,0.1);
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
 }
-.diagram-legend .dot {
+.umq-altar .umq-diagram-legend .umq-dot {
   width: 9px; height: 9px;
   border-radius: 50%;
   display: inline-block;
 }
 
-.email-box {
+.umq-altar .umq-email-box {
   background: linear-gradient(145deg, rgba(123,45,142,0.08), rgba(255,107,53,0.06));
-  border: 2px solid var(--line);
+  border: 2px solid var(--umq-line);
   border-radius: 14px;
-  padding: calc(var(--space)*0.9);
-  margin-top: calc(var(--space)*0.8);
+  padding: calc(var(--umq-space)*0.9);
+  margin-top: calc(var(--umq-space)*0.8);
 }
-.email-box .email-label {
+.umq-altar .umq-email-box .umq-email-label {
   font-family: "Cinzel", serif;
-  color: var(--morado);
+  color: var(--umq-morado);
   font-size: 0.95rem;
   margin-bottom: 0.6rem;
   text-align: center;
 }
-.copy-row {
+.umq-altar .umq-copy-row {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   background: #fff;
-  border: 2px dashed var(--naranja);
+  border: 2px dashed var(--umq-naranja);
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   margin-bottom: 0.7rem;
 }
-.copy-row .copy-text {
+.umq-altar .umq-copy-row .umq-copy-text {
   font-family: "Inter", monospace;
   font-size: 0.95rem;
-  color: var(--naranja-oscuro);
+  color: var(--umq-naranja-oscuro);
   font-weight: 700;
   flex: 1;
   word-break: break-all;
 }
-.copy-btn {
+.umq-altar .umq-copy-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: linear-gradient(135deg, var(--naranja), var(--dorado));
+  background: linear-gradient(135deg, var(--umq-naranja), var(--umq-dorado));
   color: white;
   font-weight: 700;
   font-size: 0.82rem;
@@ -404,21 +429,21 @@ section h2 {
   border-radius: 8px;
   cursor: pointer;
   white-space: nowrap;
-  box-shadow: var(--shadow);
+  box-shadow: var(--umq-shadow);
   transition: transform 0.15s;
 }
-.copy-btn:hover { transform: translateY(-1px); }
-.copy-btn.copied {
+.umq-altar .umq-copy-btn:hover { transform: translateY(-1px); }
+.umq-altar .umq-copy-btn.umq-copied {
   background: linear-gradient(135deg, #2E7D32, #4CAF50);
 }
-.email-box .warning {
-  color: var(--rosa);
+.umq-altar .umq-email-box .umq-warning {
+  color: var(--umq-rosa);
   font-weight: 700;
   font-size: 0.9rem;
   text-align: center;
 }
-.email-box .warning span {
-  background: var(--rosa);
+.umq-altar .umq-email-box .umq-warning span {
+  background: var(--umq-rosa);
   color: white;
   padding: 0.15rem 0.5rem;
   border-radius: 4px;
@@ -426,343 +451,342 @@ section h2 {
   text-transform: uppercase;
 }
 
-.credits-grid {
+.umq-altar .umq-credits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: calc(var(--space)*0.7);
-  margin-top: calc(var(--space)*0.8);
+  gap: calc(var(--umq-space)*0.7);
+  margin-top: calc(var(--umq-space)*0.8);
 }
-.credit-block {
-  background: linear-gradient(145deg, #fff, var(--hueso-suave));
-  border-left: 4px solid var(--naranja);
+.umq-altar .umq-credit-block {
+  background: linear-gradient(145deg, #fff, var(--umq-hueso-suave));
+  border-left: 4px solid var(--umq-naranja);
   border-radius: 0 12px 12px 0;
-  padding: calc(var(--space)*0.7);
+  padding: calc(var(--umq-space)*0.7);
 }
-.credit-block h4 {
+.umq-altar .umq-credit-block h4 {
   font-family: "Cinzel", serif;
-  color: var(--morado);
+  color: var(--umq-morado);
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
-.credit-block ul {
+.umq-altar .umq-credit-block ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.credit-block li {
+.umq-altar .umq-credit-block li {
   font-size: 0.9rem;
   margin-bottom: 0.35rem;
   padding-left: 1.1rem;
   position: relative;
 }
-.credit-block li::before {
+.umq-altar .umq-credit-block li::before {
   content: "✦";
   position: absolute;
   left: 0;
-  color: var(--naranja);
+  color: var(--umq-naranja);
   font-size: 0.75rem;
 }
 
-footer {
+.umq-altar .umq-footer {
   text-align: center;
-  padding: calc(var(--space)*2) calc(var(--space)*1.5);
-  color: var(--hueso);
+  padding: calc(var(--umq-space)*2) calc(var(--umq-space)*1.5);
+  color: var(--umq-hueso);
   opacity: 0.75;
   font-size: 0.85rem;
 }
-footer strong { color: var(--dorado); }
+.umq-altar .umq-footer strong { color: var(--umq-dorado); }
 
 @media print {
-  body { background: #fff; }
-  header { background: #4A2C1A; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  section { box-shadow: none; border: 1px solid #ddd; }
-  .diagram-wrap { background: #1A237E; }
-  .copy-btn { display: none; }
+  .umq-altar { background: #fff; }
+  .umq-altar .umq-hero { background: #4A2C1A; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .umq-altar .umq-section { box-shadow: none; border: 1px solid #ddd; }
+  .umq-altar .umq-diagram-wrap { background: #1A237E; }
+  .umq-altar .umq-copy-btn { display: none; }
 }
-@page { size: A4; margin: 14mm; }
 
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+  .umq-altar * { animation: none !important; transition: none !important; }
 }
 </style>
-</head>
-<body>
 
-<header>
-  <div class="content">
-    <div class="eyebrow">🔥 Concurso UMQ · Día de Muertos 2026</div>
-    <h1>¿Llegarás a la <span>cima</span>?</h1>
-    <p class="hook">Sube la torre, resuelve 2 desafíos, recolecta ofrendas y conquista el altar de Marcelino Champagnat. El primero en completar y documentar su ascenso recibe una sorpresa del Área de Investigación / CIITE.</p>
-    <div class="prize-inline">🏆 Premio sorpresa para el primero en llegar</div>
-    <div class="cta-box">
-      <p>🎮 <strong>Entra al micromundo de la Marista</strong> y busca el <em>Portal A — Altar de Muertos 2026 UMQ</em></p>
-      <a href="https://www.roblox.com/games/135435565813500/Marista-UMQ" class="cta-btn" target="_blank">🔗 Jugar ahora en Roblox</a>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<section>
-  <div class="section-header">
-    <div class="section-num">1</div>
-    <h2>Así empieza tu peregrinación</h2>
-  </div>
-  <div class="step-cards">
-    <div class="step-card">
-      <div class="icon">🎮</div>
-      <div>
-        <h4>Entra al micromundo de la Marista</h4>
-        <p>Usa el botón de arriba o busca <span class="highlight">"Marista UMQ"</span> en Roblox. Es el punto de partida oficial.</p>
+<div class="umq-altar" id="umq-altar">
+  <header class="umq-hero">
+    <div class="umq-content">
+      <div class="umq-eyebrow">🔥 Concurso UMQ · Día de Muertos 2026</div>
+      <h1>¿Llegarás a la <span>cima</span>?</h1>
+      <p class="umq-hook">Sube la torre, resuelve 2 desafíos, recolecta ofrendas y conquista el altar de Marcelino Champagnat. El primero en completar y documentar su ascenso recibe una sorpresa del Área de Investigación / CIITE.</p>
+      <div class="umq-prize-inline">🏆 Premio sorpresa para el primero en llegar</div>
+      <div class="umq-cta-box">
+        <p>🎮 <strong>Entra al micromundo de la Marista</strong> y busca el <em>Portal A — Altar de Muertos 2026 UMQ</em></p>
+        <a href="https://www.roblox.com/games/135435565813500/Marista-UMQ" class="umq-cta-btn" target="_blank">🔗 Jugar ahora en Roblox</a>
       </div>
     </div>
-    <div class="step-card">
-      <div class="icon">🚪</div>
-      <div>
-        <h4>Busca el portal</h4>
-        <p>En la entrada verás una <span class="highlight">"Guía de Bienvenida"</span> con dos portales. Toca <span class="highlight">"Altar de Muertos 2026 UMQ"</span>.</p>
+  </header>
+
+  <div class="umq-main">
+
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">1</div>
+      <h2>Así empieza tu peregrinación</h2>
+    </div>
+    <div class="umq-step-cards">
+      <div class="umq-step-card">
+        <div class="umq-icon">🎮</div>
+        <div>
+          <h4>Entra al micromundo de la Marista</h4>
+          <p>Usa el botón de arriba o busca <span class="umq-highlight">"Marista UMQ"</span> en Roblox. Es el punto de partida oficial.</p>
+        </div>
+      </div>
+      <div class="umq-step-card">
+        <div class="umq-icon">🚪</div>
+        <div>
+          <h4>Busca el portal</h4>
+          <p>En la entrada verás una <span class="umq-highlight">"Guía de Bienvenida"</span> con dos portales. Toca <span class="umq-highlight">"Altar de Muertos 2026 UMQ"</span>.</p>
+        </div>
+      </div>
+      <div class="umq-step-card">
+        <div class="umq-icon">✨</div>
+        <div>
+          <h4>Comienza el camino</h4>
+          <p>Aparecerás en la base de la torre. Lee la bienvenida, toca <span class="umq-highlight">"Comenzar el camino"</span> y empieza a subir.</p>
+        </div>
       </div>
     </div>
-    <div class="step-card">
-      <div class="icon">✨</div>
-      <div>
-        <h4>Comienza el camino</h4>
-        <p>Aparecerás en la base de la torre. Lee la bienvenida, toca <span class="highlight">"Comenzar el camino"</span> y empieza a subir.</p>
+  </section>
+
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">2</div>
+      <h2>El recorrido: 3 secciones, 2 desafíos</h2>
+    </div>
+    <p style="color:var(--umq-muted); margin-bottom:1rem;">Sube la torre pasando por 3 zonas narrativas. En el camino enfrentarás 2 micro-puzzles que debes resolver para avanzar.</p>
+    <div class="umq-diagram-wrap">
+      <svg viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="umq-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFD700" stop-opacity="0.25"/>
+            <stop offset="50%" stop-color="#7B2D8E" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#1A237E" stop-opacity="0.5"/>
+          </linearGradient>
+          <filter id="umq-glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect width="360" height="640" fill="url(#umq-sky)" rx="12"/>
+        <circle cx="180" cy="70" r="22" fill="#FFD700" opacity="0.9"/>
+        <circle cx="180" cy="70" r="34" fill="#FFD700" opacity="0.2"/>
+        <rect x="100" y="35" width="160" height="85" fill="#FF6B35" opacity="0.85" rx="4"/>
+        <text x="180" y="72" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">CIMA DEL ENCUENTRO</text>
+        <text x="180" y="88" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">Altar de Marcelino · Foto 5</text>
+        <circle cx="180" cy="55" r="12" fill="#FFD700"/>
+        <text x="180" y="60" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">5</text>
+        <rect x="125" y="155" width="110" height="7" fill="#FFD700" opacity="0.35" rx="2"/>
+        <text x="180" y="150" text-anchor="middle" fill="#FFD700" font-size="8" font-family="Inter,sans-serif">Puente de Luz (8s) · Foto 4</text>
+        <circle cx="180" cy="140" r="12" fill="#FFD700"/>
+        <text x="180" y="145" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">4</text>
+        <rect x="90" y="210" width="180" height="100" fill="#7B2D8E" opacity="0.8" rx="4"/>
+        <text x="180" y="255" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">LA SENDA DEL SERVICIO</text>
+        <text x="180" y="272" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">Puente temporal + Símbolo Marista</text>
+        <rect x="130" y="370" width="100" height="50" fill="#7B2D8E" opacity="0.7" rx="2"/>
+        <line x1="130" y1="370" x2="230" y2="420" stroke="#FFD700" stroke-width="1.2" opacity="0.5"/>
+        <line x1="230" y1="370" x2="130" y2="420" stroke="#FFD700" stroke-width="1.2" opacity="0.5"/>
+        <text x="180" y="400" text-anchor="middle" fill="#FFD700" font-size="8" font-family="Inter,sans-serif">Puerta de Ofrenda · Foto 3</text>
+        <circle cx="180" cy="358" r="12" fill="#FFD700"/>
+        <text x="180" y="363" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">3</text>
+        <rect x="80" y="460" width="200" height="110" fill="#FF6B35" opacity="0.75" rx="4"/>
+        <text x="180" y="505" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">EL CAMINO DE LA FE</text>
+        <text x="180" y="522" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">Y LA SENCILLEZ</text>
+        <text x="180" y="540" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">5 ofrendas doradas · Foto 2</text>
+        <circle cx="180" cy="485" r="12" fill="#FFD700"/>
+        <text x="180" y="490" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">2</text>
+        <rect x="65" y="590" width="230" height="35" fill="#4A2C1A" opacity="0.9" rx="4"/>
+        <text x="180" y="612" text-anchor="middle" fill="#FFD700" font-size="10" font-family="Cinzel,serif">SPAWN / PORTAL UMQ · Foto 1</text>
+        <circle cx="180" cy="580" r="12" fill="#FFD700"/>
+        <text x="180" y="585" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">1</text>
+        <circle cx="70" cy="600" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="290" cy="600" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="70" cy="490" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="290" cy="395" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="70" cy="260" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="290" cy="170" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <circle cx="70" cy="80" r="4" fill="#FF6B35" filter="url(#umq-glow)"/>
+        <text x="35" y="320" text-anchor="middle" fill="#FFF8E1" font-size="9" font-family="Inter,sans-serif" opacity="0.7" transform="rotate(-90 35 320)">ASCENSO</text>
+        <text x="325" y="320" text-anchor="middle" fill="#FFF8E1" font-size="9" font-family="Inter,sans-serif" opacity="0.7" transform="rotate(90 325 320)">5 FOTOS</text>
+      </svg>
+      <div class="umq-diagram-legend">
+        <span><span class="umq-dot" style="background:#FF6B35;"></span> Checkpoint</span>
+        <span><span class="umq-dot" style="background:#FFD700;"></span> Punto de foto</span>
+        <span><span class="umq-dot" style="background:#7B2D8E;"></span> Puzzle / Barrera</span>
+        <span><span class="umq-dot" style="background:#E91E63;"></span> Sección narrativa</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="section-header">
-    <div class="section-num">2</div>
-    <h2>El recorrido: 3 secciones, 2 desafíos</h2>
-  </div>
-  <p style="color:var(--muted); margin-bottom:1rem;">Sube la torre pasando por 3 zonas narrativas. En el camino enfrentarás 2 micro-puzzles que debes resolver para avanzar.</p>
-  <div class="diagram-wrap">
-    <svg viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#FFD700" stop-opacity="0.25"/>
-          <stop offset="50%" stop-color="#7B2D8E" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#1A237E" stop-opacity="0.5"/>
-        </linearGradient>
-        <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <rect width="360" height="640" fill="url(#sky)" rx="12"/>
-      <circle cx="180" cy="70" r="22" fill="#FFD700" opacity="0.9"/>
-      <circle cx="180" cy="70" r="34" fill="#FFD700" opacity="0.2"/>
-      <rect x="100" y="35" width="160" height="85" fill="#FF6B35" opacity="0.85" rx="4"/>
-      <text x="180" y="72" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">CIMA DEL ENCUENTRO</text>
-      <text x="180" y="88" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">Altar de Marcelino · Foto 5</text>
-      <circle cx="180" cy="55" r="12" fill="#FFD700"/>
-      <text x="180" y="60" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">5</text>
-      <rect x="125" y="155" width="110" height="7" fill="#FFD700" opacity="0.35" rx="2"/>
-      <text x="180" y="150" text-anchor="middle" fill="#FFD700" font-size="8" font-family="Inter,sans-serif">Puente de Luz (8s) · Foto 4</text>
-      <circle cx="180" cy="140" r="12" fill="#FFD700"/>
-      <text x="180" y="145" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">4</text>
-      <rect x="90" y="210" width="180" height="100" fill="#7B2D8E" opacity="0.8" rx="4"/>
-      <text x="180" y="255" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">LA SENDA DEL SERVICIO</text>
-      <text x="180" y="272" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">Puente temporal + Símbolo Marista</text>
-      <rect x="130" y="370" width="100" height="50" fill="#7B2D8E" opacity="0.7" rx="2"/>
-      <line x1="130" y1="370" x2="230" y2="420" stroke="#FFD700" stroke-width="1.2" opacity="0.5"/>
-      <line x1="230" y1="370" x2="130" y2="420" stroke="#FFD700" stroke-width="1.2" opacity="0.5"/>
-      <text x="180" y="400" text-anchor="middle" fill="#FFD700" font-size="8" font-family="Inter,sans-serif">Puerta de Ofrenda · Foto 3</text>
-      <circle cx="180" cy="358" r="12" fill="#FFD700"/>
-      <text x="180" y="363" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">3</text>
-      <rect x="80" y="460" width="200" height="110" fill="#FF6B35" opacity="0.75" rx="4"/>
-      <text x="180" y="505" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">EL CAMINO DE LA FE</text>
-      <text x="180" y="522" text-anchor="middle" fill="#FFF8E1" font-size="11" font-family="Cinzel,serif" font-weight="700">Y LA SENCILLEZ</text>
-      <text x="180" y="540" text-anchor="middle" fill="#FFD700" font-size="9" font-family="Inter,sans-serif">5 ofrendas doradas · Foto 2</text>
-      <circle cx="180" cy="485" r="12" fill="#FFD700"/>
-      <text x="180" y="490" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">2</text>
-      <rect x="65" y="590" width="230" height="35" fill="#4A2C1A" opacity="0.9" rx="4"/>
-      <text x="180" y="612" text-anchor="middle" fill="#FFD700" font-size="10" font-family="Cinzel,serif">SPAWN / PORTAL UMQ · Foto 1</text>
-      <circle cx="180" cy="580" r="12" fill="#FFD700"/>
-      <text x="180" y="585" text-anchor="middle" fill="#1A237E" font-size="10" font-weight="800">1</text>
-      <circle cx="70" cy="600" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="290" cy="600" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="70" cy="490" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="290" cy="395" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="70" cy="260" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="290" cy="170" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <circle cx="70" cy="80" r="4" fill="#FF6B35" filter="url(#glow)"/>
-      <text x="35" y="320" text-anchor="middle" fill="#FFF8E1" font-size="9" font-family="Inter,sans-serif" opacity="0.7" transform="rotate(-90 35 320)">ASCENSO</text>
-      <text x="325" y="320" text-anchor="middle" fill="#FFF8E1" font-size="9" font-family="Inter,sans-serif" opacity="0.7" transform="rotate(90 325 320)">5 FOTOS</text>
-    </svg>
-    <div class="diagram-legend">
-      <span><span class="dot" style="background:#FF6B35;"></span> Checkpoint</span>
-      <span><span class="dot" style="background:#FFD700;"></span> Punto de foto</span>
-      <span><span class="dot" style="background:#7B2D8E;"></span> Puzzle / Barrera</span>
-      <span><span class="dot" style="background:#E91E63;"></span> Sección narrativa</span>
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">3</div>
+      <h2>Las 5 fotos que debes enviar</h2>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-header">
-    <div class="section-num">3</div>
-    <h2>Las 5 fotos que debes enviar</h2>
-  </div>
-  <p style="color:var(--muted); margin-bottom:1rem;">Para ganar, demuestra que completaste el recorrido. Saca <strong>5 capturas de pantalla</strong> en estos puntos exactos y envíalas numeradas.</p>
-  <div class="capture-grid">
-    <div class="capture-card">
-      <div class="cam-num">1</div>
-      <div class="cam-icon">📸</div>
-      <h4>El inicio</h4>
-      <p>Tu personaje en la base junto al letrero <strong>"UMQ · CIITE"</strong>. Debe verse que estás en el mundo del altar.</p>
-    </div>
-    <div class="capture-card">
-      <div class="cam-num">2</div>
-      <div class="cam-icon">📸</div>
-      <h4>Tu primera ofrenda dorada</h4>
-      <p>Recogiendo una moneda dorada con su virtud visible: <strong>Fe, Sencillez, Humildad, Trabajo o Amor</strong>.</p>
-    </div>
-    <div class="capture-card">
-      <div class="cam-num">3</div>
-      <div class="cam-icon">📸</div>
-      <h4>La Puerta abierta</h4>
-      <p>Atravesando la <strong>Puerta de Ofrenda</strong> después de juntar 3 doradas. Debe verse el mensaje de apertura.</p>
-    </div>
-    <div class="capture-card">
-      <div class="cam-num">4</div>
-      <div class="cam-icon">📸</div>
-      <h4>El Puente de Luz</h4>
-      <p>Sobre el <strong>puente naranja</strong> después de activar el Símbolo Marista con E. ¡Solo dura 8 segundos!</p>
-    </div>
-    <div class="capture-card">
-      <div class="cam-num">5</div>
-      <div class="cam-icon">📸</div>
-      <h4>El encuentro final</h4>
-      <p>Frente al <strong>altar de Marcelino Champagnat</strong> en la cima, con el texto final visible en pantalla.</p>
-    </div>
-  </div>
-  <div class="prize-banner" style="margin-top:1.5rem;">
-    <h3>🏆 ¿La sorpresa?</h3>
-    <p>El <strong>primero en completar</strong> y enviar las <strong>5 fotos completas</strong> demostrando que recorrió toda la actividad recibirá una <strong>sorpresa especial</strong> del Área de Investigación / CIITE UMQ. ¡Completa el recorrido y documenta cada paso!</p>
-  </div>
-</section>
-
-<section>
-  <div class="section-header">
-    <div class="section-num">4</div>
-    <h2>Tips para no morir en el intento</h2>
-  </div>
-  <div class="tip-box">
-    <p><strong>💰 Necesitas 3 doradas de 5.</strong> Hay 5 ofrendas doradas escondidas en la base. Busca bien antes de subir.</p>
-  </div>
-  <div class="tip-box">
-    <p><strong>👆 Doble salto activo.</strong> Presiona el botón de salto <strong>dos veces</strong> para alcanzar plataformas más altas.</p>
-  </div>
-  <div class="tip-box">
-    <p><strong>⏱️ El puente dura 8 segundos.</strong> Actívalo con <strong>E</strong> en el Símbolo Marista <em>cuando estés listo para cruzar</em>, no antes.</p>
-  </div>
-  <div class="tip-box">
-    <p><strong>🔥 Checkpoints automáticos.</strong> Si caes, reapareces en el último punto seguro que tocaste. No pierdes todo tu progreso.</p>
-  </div>
-  <div class="tip-box">
-    <p><strong>📖 Lee los carteles de Marcelino.</strong> Las frases en las paredes son pistas. Las águilas maristas en el muro sur te indican que vas bien.</p>
-  </div>
-</section>
-
-<section>
-  <div class="section-header">
-    <div class="section-num">5</div>
-    <h2>¿Cómo enviar tus fotos?</h2>
-  </div>
-  <div class="step-cards">
-    <div class="step-card">
-      <div class="icon">📱</div>
-      <div>
-        <h4>Revisa tus capturas</h4>
-        <p>Asegúrate de que tu <span class="highlight">nombre de usuario de Roblox</span> sea visible o escríbelo al enviar.</p>
+    <p style="color:var(--umq-muted); margin-bottom:1rem;">Para ganar, demuestra que completaste el recorrido. Saca <strong>5 capturas de pantalla</strong> en estos puntos exactos y envíalas numeradas.</p>
+    <div class="umq-capture-grid">
+      <div class="umq-capture-card">
+        <div class="umq-cam-num">1</div>
+        <div class="umq-cam-icon">📸</div>
+        <h4>El inicio</h4>
+        <p>Tu personaje en la base junto al letrero <strong>"UMQ · CIITE"</strong>. Debe verse que estás en el mundo del altar.</p>
+      </div>
+      <div class="umq-capture-card">
+        <div class="umq-cam-num">2</div>
+        <div class="umq-cam-icon">📸</div>
+        <h4>Tu primera ofrenda dorada</h4>
+        <p>Recogiendo una moneda dorada con su virtud visible: <strong>Fe, Sencillez, Humildad, Trabajo o Amor</strong>.</p>
+      </div>
+      <div class="umq-capture-card">
+        <div class="umq-cam-num">3</div>
+        <div class="umq-cam-icon">📸</div>
+        <h4>La Puerta abierta</h4>
+        <p>Atravesando la <strong>Puerta de Ofrenda</strong> después de juntar 3 doradas. Debe verse el mensaje de apertura.</p>
+      </div>
+      <div class="umq-capture-card">
+        <div class="umq-cam-num">4</div>
+        <div class="umq-cam-icon">📸</div>
+        <h4>El Puente de Luz</h4>
+        <p>Sobre el <strong>puente naranja</strong> después de activar el Símbolo Marista con E. ¡Solo dura 8 segundos!</p>
+      </div>
+      <div class="umq-capture-card">
+        <div class="umq-cam-num">5</div>
+        <div class="umq-cam-icon">📸</div>
+        <h4>El encuentro final</h4>
+        <p>Frente al <strong>altar de Marcelino Champagnat</strong> en la cima, con el texto final visible en pantalla.</p>
       </div>
     </div>
-    <div class="step-card">
-      <div class="icon">📤</div>
-      <div>
-        <h4>Envía en orden</h4>
-        <p>Manda las <span class="highlight">5 imágenes numeradas del 1 al 5</span> al correo del Área de Investigación / CIITE.</p>
+    <div class="umq-prize-banner" style="margin-top:1.5rem;">
+      <h3>🏆 ¿La sorpresa?</h3>
+      <p>El <strong>primero en completar</strong> y enviar las <strong>5 fotos completas</strong> demostrando que recorrió toda la actividad recibirá una <strong>sorpresa especial</strong> del Área de Investigación / CIITE UMQ. ¡Completa el recorrido y documenta cada paso!</p>
+    </div>
+  </section>
+
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">4</div>
+      <h2>Tips para no morir en el intento</h2>
+    </div>
+    <div class="umq-tip-box">
+      <p><strong>💰 Necesitas 3 doradas de 5.</strong> Hay 5 ofrendas doradas escondidas en la base. Busca bien antes de subir.</p>
+    </div>
+    <div class="umq-tip-box">
+      <p><strong>👆 Doble salto activo.</strong> Presiona el botón de salto <strong>dos veces</strong> para alcanzar plataformas más altas.</p>
+    </div>
+    <div class="umq-tip-box">
+      <p><strong>⏱️ El puente dura 8 segundos.</strong> Actívalo con <strong>E</strong> en el Símbolo Marista <em>cuando estés listo para cruzar</em>, no antes.</p>
+    </div>
+    <div class="umq-tip-box">
+      <p><strong>🔥 Checkpoints automáticos.</strong> Si caes, reapareces en el último punto seguro que tocaste. No pierdes todo tu progreso.</p>
+    </div>
+    <div class="umq-tip-box">
+      <p><strong>📖 Lee los carteles de Marcelino.</strong> Las frases en las paredes son pistas. Las águilas maristas en el muro sur te indican que vas bien.</p>
+    </div>
+  </section>
+
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">5</div>
+      <h2>¿Cómo enviar tus fotos?</h2>
+    </div>
+    <div class="umq-step-cards">
+      <div class="umq-step-card">
+        <div class="umq-icon">📱</div>
+        <div>
+          <h4>Revisa tus capturas</h4>
+          <p>Asegúrate de que tu <span class="umq-highlight">nombre de usuario de Roblox</span> sea visible o escríbelo al enviar.</p>
+        </div>
+      </div>
+      <div class="umq-step-card">
+        <div class="umq-icon">📤</div>
+        <div>
+          <h4>Envía en orden</h4>
+          <p>Manda las <span class="umq-highlight">5 imágenes numeradas del 1 al 5</span> al correo del Área de Investigación / CIITE.</p>
+        </div>
+      </div>
+      <div class="umq-step-card">
+        <div class="umq-icon">📝</div>
+        <div>
+          <h4>Incluye tus datos</h4>
+          <p>Escribe tu <span class="umq-highlight">nombre completo, grupo y usuario de Roblox</span> en el mensaje.</p>
+        </div>
       </div>
     </div>
-    <div class="step-card">
-      <div class="icon">📝</div>
-      <div>
-        <h4>Incluye tus datos</h4>
-        <p>Escribe tu <span class="highlight">nombre completo, grupo y usuario de Roblox</span> en el mensaje.</p>
+
+    <div class="umq-email-box">
+      <div class="umq-email-label">📧 Correo del Área de Investigación / CIITE — copia y pega en tu email</div>
+      <div class="umq-copy-row">
+        <span class="umq-copy-text" id="umq-emailText">ciite@umq.maristas.edu.mx</span>
+        <button class="umq-copy-btn" onclick="umqCopyToClipboard('umq-emailText', this)">📋 Copiar</button>
+      </div>
+      <div class="umq-email-label">📝 Asunto obligatorio — copia y pega exactamente</div>
+      <div class="umq-copy-row">
+        <span class="umq-copy-text" id="umq-subjectText">DIA_DE_MUERTOS_UMQ_NombreApellido</span>
+        <button class="umq-copy-btn" onclick="umqCopyToClipboard('umq-subjectText', this)">📋 Copiar</button>
+      </div>
+      <p style="font-size:0.88rem; color:var(--umq-muted); text-align:center; margin-bottom:0.5rem;">Ejemplo: <em>DIA_DE_MUERTOS_UMQ_JuanPerez</em></p>
+      <div class="umq-warning"><span>¡Importante!</span> Solo se considerarán los correos que tengan el asunto exacto y correcto.</div>
+    </div>
+  </section>
+
+  <section class="umq-section">
+    <div class="umq-section-header">
+      <div class="umq-section-num">6</div>
+      <h2>El equipo detrás del reto</h2>
+    </div>
+    <p style="color:var(--umq-muted); margin-bottom:1rem;">Una colaboración entre el <strong>Área de Investigación / CIITE UMQ</strong> y <strong>Editorial (micromundo de la Marista)</strong> como parte de la innovación educativa de la Universidad Marista de Querétaro.</p>
+    <div class="umq-credits-grid">
+      <div class="umq-credit-block">
+        <h4>🎓 Área de Investigación / CIITE UMQ</h4>
+        <ul>
+          <li><strong>Dr. Christian Jonathan Angel Rueda</strong></li>
+          <li><strong>Mtro. Martin Joaquin Aguilar Muñoz</strong></li>
+          <li><strong>Ing. Ricardo Rivera Carrillo</strong></li>
+        </ul>
+      </div>
+      <div class="umq-credit-block">
+        <h4>📖 Editorial / Micromundo de la Marista</h4>
+        <ul>
+          <li><strong>Paola Téllez Reyes</strong></li>
+          <li><strong>Mariana Ceja Covarrubias</strong></li>
+          <li><strong>Maria Fernanda Martínez Santana</strong></li>
+        </ul>
       </div>
     </div>
+    <p style="margin-top:1.2rem; text-align:center; color:var(--umq-muted); font-size:0.88rem;">
+      Proyecto de Innovación Educativa — Área de Investigación / CIITE UMQ · Universidad Marista de Querétaro<br>
+      Dinámica del Altar de Día de Muertos · Marcelino Champagnat · 2026
+    </p>
+  </section>
+
   </div>
 
-  <div class="email-box">
-    <div class="email-label">📧 Correo del Área de Investigación / CIITE — copia y pega en tu email</div>
-    <div class="copy-row">
-      <span class="copy-text" id="emailText"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="690a00001d0c291c04184704081b001a1d081a470c0d1c470411">[email&#160;protected]</a></span>
-      <button class="copy-btn" onclick="copyToClipboard('emailText', this)">📋 Copiar</button>
-    </div>
-    <div class="email-label">📝 Asunto obligatorio — copia y pega exactamente</div>
-    <div class="copy-row">
-      <span class="copy-text" id="subjectText">DIA_DE_MUERTOS_UMQ_NombreApellido</span>
-      <button class="copy-btn" onclick="copyToClipboard('subjectText', this)">📋 Copiar</button>
-    </div>
-    <p style="font-size:0.88rem; color:var(--muted); text-align:center; margin-bottom:0.5rem;">Ejemplo: <em>DIA_DE_MUERTOS_UMQ_JuanPerez</em></p>
-    <div class="warning"><span>¡Importante!</span> Solo se considerarán los correos que tengan el asunto exacto y correcto.</div>
-  </div>
-</section>
+  <footer class="umq-footer">
+    <p>"El verdadero ascenso no fue vertical... fue interior."</p>
+    <p><strong>Área de Investigación / CIITE UMQ</strong> · <strong>Editorial Marista</strong> · Día de Muertos 2026</p>
+    <p style="margin-top:0.6rem; opacity:0.6;"><a href="https://www.roblox.com/games/135435565813500/Marista-UMQ" style="color:var(--umq-dorado);" target="_blank">🔗 Jugar ahora: Marista UMQ en Roblox</a></p>
+  </footer>
 
-<section>
-  <div class="section-header">
-    <div class="section-num">6</div>
-    <h2>El equipo detrás del reto</h2>
-  </div>
-  <p style="color:var(--muted); margin-bottom:1rem;">Una colaboración entre el <strong>Área de Investigación / CIITE UMQ</strong> y <strong>Editorial (micromundo de la Marista)</strong> como parte de la innovación educativa de la Universidad Marista de Querétaro.</p>
-  <div class="credits-grid">
-    <div class="credit-block">
-      <h4>🎓 Área de Investigación / CIITE UMQ</h4>
-      <ul>
-        <li><strong>Dr. Christian Jonathan Angel Rueda</strong></li>
-        <li><strong>Mtro. Martin Joaquin Aguilar Muñoz</strong></li>
-        <li><strong>Ing. Ricardo Rivera Carrillo</strong></li>
-      </ul>
-    </div>
-    <div class="credit-block">
-      <h4>📖 Editorial / Micromundo de la Marista</h4>
-      <ul>
-        <li><strong>Paola Téllez Reyes</strong></li>
-        <li><strong>Mariana Ceja Covarrubias</strong></li>
-        <li><strong>Maria Fernanda Martínez Santana</strong></li>
-      </ul>
-    </div>
-  </div>
-  <p style="margin-top:1.2rem; text-align:center; color:var(--muted); font-size:0.88rem;">
-    Proyecto de Innovación Educativa — Área de Investigación / CIITE UMQ · Universidad Marista de Querétaro<br>
-    Dinámica del Altar de Día de Muertos · Marcelino Champagnat · 2026
-  </p>
-</section>
-
-</main>
-
-<footer>
-  <p>"El verdadero ascenso no fue vertical... fue interior."</p>
-  <p><strong>Área de Investigación / CIITE UMQ</strong> · <strong>Editorial Marista</strong> · Día de Muertos 2026</p>
-  <p style="margin-top:0.6rem; opacity:0.6;"><a href="https://www.roblox.com/games/135435565813500/Marista-UMQ" style="color:var(--dorado);" target="_blank">🔗 Jugar ahora: Marista UMQ en Roblox</a></p>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function copyToClipboard(elementId, btn) {
-  const text = document.getElementById(elementId).innerText;
-  navigator.clipboard.writeText(text).then(function() {
-    btn.innerHTML = "✅ Copiado";
-    btn.classList.add("copied");
-    setTimeout(function() {
-      btn.innerHTML = "📋 Copiar";
-      btn.classList.remove("copied");
-    }, 2000);
-  });
-}
-</script>
-
+  <script>
+  function umqCopyToClipboard(elementId, btn) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(function() {
+      btn.innerHTML = "✅ Copiado";
+      btn.classList.add("umq-copied");
+      setTimeout(function() {
+        btn.innerHTML = "📋 Copiar";
+        btn.classList.remove("umq-copied");
+      }, 2000);
+    });
+  }
+  </script>
+</div>
+<!-- ===== FIN BLOQUE WORDPRESS: copiar hasta aquí ===== -->
 </body>
 </html>
